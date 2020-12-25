@@ -1,0 +1,16 @@
+<Anaekran>
+    name:'first'
+    MDScrollViewRefreshLayout:
+        id: refresh_layout
+        refresh_callback: app.refresh_callback
+        root_layout: root
+        MDList:
+            id:task_items
+                
+
+    MDRaisedButton:
+        text:'Add task'
+        pos_hint: {'center_x':0.5,'center_y':0.15}
+        on_press:
+            root.manager.current = 'second'
+            

@@ -1,0 +1,26 @@
+<Anaekran2>
+    name: 'second'
+    MDTextField:
+        id:tweet_text
+        pos_hint: {'center_y':0.4,'center_x':0.5}
+        size_hint : (0.7,0.1)
+        hint_text: 'Password'
+        helper_text:'Required'
+        helper_text_mode:  'on_error'
+        icon_right: 'account'
+        icon_right_color: app.theme_cls.primary_color
+        required: True
+        mode: "rectangle"
+
+
+    MDRaisedButton:
+        text: 'Back'
+        pos_hint: {'center_x':0.3,'center_y':0.2}
+        on_press:
+            root.manager.current = 'first'
+    MDRaisedButton:
+        text: 'tweet at'
+        pos_hint: {'center_x':0.7,'center_y':0.2}
+        on_press:
+            app.addTask()
+
